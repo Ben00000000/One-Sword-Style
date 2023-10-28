@@ -1300,9 +1300,9 @@ body {
                                     e.lineJoin = "miter"
 
 e.shadowColor = "black";
-e.shadowBlur = 1;
-e.shadowOffsetX = 2;
-e.shadowOffsetY = 2;
+e.shadowBlur = 10;
+e.shadowOffsetX = 5;
+e.shadowOffsetY = 5;
                                       e.font = "30px 'NarutoFont'";
                                     e.fillStyle = "#FFFFFF";
                                  e.fillText("One Sword Style", 170, 100);
@@ -1456,12 +1456,12 @@ e.shadowOffsetY = 2;
                 const cl = document.querySelector("canvas")
                   , $l = cl.getContext("2d");
                 let xl, fl;
-                function ul() {
+         function ul() {
                     xl = window.devicePixelRatio;
                     let t = window.innerWidth
                       , e = window.innerHeight;
-                    t  && (e ),
-                    e && (t ),
+                    t < e / 1.4545454545454546 && (e = 1.4545454545454546 * t),
+                    e < 1.4545454545454546 * t && (t = e / 1.4545454545454546),
                     cl.style.width = Math.floor(t),
                     cl.style.height = Math.floor(e),
                     cl.width = Math.floor(t * xl),
@@ -1473,6 +1473,7 @@ e.shadowOffsetY = 2;
                     zt.x = Math.floor(cl.width / xl),
                     zt.y = Math.floor(cl.height / xl)
                 }
+
                 window.addEventListener("resize", ()=>setTimeout(ul, q)),
                 ul(),
                 function t() {
