@@ -1163,7 +1163,7 @@ body {
                         an(310, 6310, 11)(),
                         sn(310, 6310, -1, U)
                     }
-                    ], [()=>on("Still can't find him."), 500, 1], [t=>{
+                    ], [()=>on("This is the highest point"), 500, 1], [t=>{
                         Yt.x = $t(Vn.x, 130, dt(t)),
                         At.p.x = $t(ke.$.x, -60, dt(t))
                     }
@@ -1174,7 +1174,7 @@ body {
                         At.p.x = $t(-60, 134, Mt(t)),
                         At.p.y = $t(ke.$.y, 6360, Mt(t))
                     }
-                    , 1e3], [()=>on("(To be continued)"), 500, 1], [()=>{
+                    , 1e3], [()=>on("(You did it tap to restart)"), 500, 1], [()=>{
                         fe.push(He())
                     }
                     ], [()=>{}
@@ -1303,9 +1303,16 @@ e.shadowColor = "black";
 e.shadowBlur = 10;
 e.shadowOffsetX = 5;
 e.shadowOffsetY = 5;
-                                      e.font = "30px 'NarutoFont'";
-                                    e.fillStyle = "#FFFFFF";
-                                 e.fillText("One Sword Style", 170, 100);
+                                      e.font = "35px 'NarutoFont'";
+                                    e.fillStyle = "#FF0000";
+                                 e.fillText("One Sword Style", 180, 100);
+
+                                 {
+                                   e.font = "  20px 'NarutoFont'";
+                                    e.fillStyle = "#FF0000";
+                                 e.fillText("TAP TO START", 205, 500);
+                                 }
+
 
                                 }
                                 )
@@ -1463,7 +1470,7 @@ e.shadowOffsetY = 5;
                     t < e / 1.4545454545454546 && (e = 1.4545454545454546 * t),
                     e < 1.4545454545454546 * t && (t = e / 1.4545454545454546),
                     cl.style.width = Math.floor(t),
-                    cl.style.height = Math.floor(e),
+                    cl.style.height = Math.floor(e+ 116),
                     cl.width = Math.floor(t * xl),
                     cl.height = Math.floor(e * xl),
                     $l.textBaseline = "middle",
